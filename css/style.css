@@ -11,6 +11,9 @@
 .p-2{
     padding: 2px;
 }
+.mleft-10{
+    margin-left: 10px
+}
 
 .flex{
     display: flex;

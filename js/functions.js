@@ -61,15 +61,17 @@ function stampaInPagina(){
         imgContainer.append(immagineAllegata);
 
         infoContainer = document.createElement("div");
-        infoContainer.className= "flex column justify-center align-center w-100";
+        infoContainer.className= "flex column justify-center w-100";
         card.append(infoContainer);
 
         nomeMembro = document.createElement("p");
         nomeMembro.innerHTML = "Nome: " + teamList[i].nome;
+        nomeMembro.className = "mleft-10";
         infoContainer.append(nomeMembro);
 
         ruoloMembro = document.createElement("p");
         ruoloMembro.innerHTML = "Ruolo: " + teamList[i].ruolo;
+        ruoloMembro.className = "mleft-10";
         infoContainer.append(ruoloMembro);
 
     }
