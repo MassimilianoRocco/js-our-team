@@ -37,14 +37,27 @@ membro6.immagine = "barbara-ramos-graphic-designer.jpg"
 teamList.push(membro6);
 
 let membersList = document.getElementById("list");
-let nuovoMembro;
+let nomeMembro;
+let ruoloMembro;
+let immagineAllegata;
 
 function stampaInPagina(){
     for(i=0; i<teamList.length; i++){
         console.log(teamList[i].nome, teamList[i].ruolo);
 
-        nuovoMembro = document.createElement("p");
-        nuovoMembro.innerHTML = "Nome e Cognome: " + teamList[i].nome + ". Ruolo: " + teamList[i].ruolo + ". Immagine: " + teamList[i].immagine;
-        membersList.append(nuovoMembro);
+        nomeMembro = document.createElement("p");
+        nomeMembro.innerHTML = "Nome: " + teamList[i].nome;
+        nomeMembro.className ="box"
+        membersList.append(nomeMembro);
+
+        ruoloMembro = document.createElement("p");
+        ruoloMembro.innerHTML = "Ruolo: " + teamList[i].ruolo;
+        nomeMembro.append(ruoloMembro);
+
+        immagineAllegata= document.createElement("img");
+        immagineAllegata.src="img/" + teamList[i].immagine;
+        immagineAllegata.className ="imageTeam"; 
+        nomeMembro.append(immagineAllegata);
+
     }
 }
