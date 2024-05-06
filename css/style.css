@@ -5,15 +5,37 @@
     font-family: sans-serif;
 }
 
+.w-100{
+    width: 100%;
+}
+.p-2{
+    padding: 2px;
+}
+
+.flex{
+    display: flex;
+}
+.column{
+    flex-direction: column;
+}
+.justify-center{
+    justify-content: center;
+}
+.align-center{
+    align-items: center;
+}
+
 .imageTeam{
     width: 100px;
     height: 100px;
     display: block;
+    border-radius: 10px;
 }
 
 .box{
-    border: 1px solid black;
+    border: 1px solid rgb(27, 130, 199);
+    border-radius: 10px;
     background-color: whitesmoke;
-    width: 500px;
-    margin: 1rem 0;
+    width: 350px;
+    margin: 10px 2px;
 }

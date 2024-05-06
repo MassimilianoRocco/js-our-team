@@ -37,6 +37,9 @@ membro6.immagine = "barbara-ramos-graphic-designer.jpg"
 teamList.push(membro6);
 
 let membersList = document.getElementById("list");
+let card;
+let infoContainer;
+let imgContainer;
 let nomeMembro;
 let ruoloMembro;
 let immagineAllegata;
@@ -45,19 +48,29 @@ function stampaInPagina(){
     for(i=0; i<teamList.length; i++){
         console.log(teamList[i].nome, teamList[i].ruolo);
 
-        nomeMembro = document.createElement("p");
-        nomeMembro.innerHTML = "Nome: " + teamList[i].nome;
-        nomeMembro.className ="box"
-        membersList.append(nomeMembro);
+        card = document.createElement("div");
+        card.className = "flex box p-2";
+        membersList.append(card);
 
-        ruoloMembro = document.createElement("p");
-        ruoloMembro.innerHTML = "Ruolo: " + teamList[i].ruolo;
-        nomeMembro.append(ruoloMembro);
+        imgContainer= document.createElement("div");
+        card.append(imgContainer);
 
         immagineAllegata= document.createElement("img");
         immagineAllegata.src="img/" + teamList[i].immagine;
         immagineAllegata.className ="imageTeam"; 
-        nomeMembro.append(immagineAllegata);
+        imgContainer.append(immagineAllegata);
+
+        infoContainer = document.createElement("div");
+        infoContainer.className= "flex column justify-center align-center w-100";
+        card.append(infoContainer);
+
+        nomeMembro = document.createElement("p");
+        nomeMembro.innerHTML = "Nome: " + teamList[i].nome;
+        infoContainer.append(nomeMembro);
+
+        ruoloMembro = document.createElement("p");
+        ruoloMembro.innerHTML = "Ruolo: " + teamList[i].ruolo;
+        infoContainer.append(ruoloMembro);
 
     }
 }
